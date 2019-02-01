@@ -121,7 +121,7 @@ export class App {
                     "metaList": fileData
                 }]
             };
-            fs.writeFile("media/" + storyName + ".meta.ftd", JSON.stringify(formattedData, null, 4), (err) => {
+            fs.writeFile(DEFAULTS.MEDIA_FOLDER + storyName + ".meta.ftd", JSON.stringify(formattedData, null, 4), (err) => {
                 if(err) {
                     return console.log(err);
                 }
