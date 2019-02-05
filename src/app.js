@@ -87,19 +87,20 @@ export class App {
         let fileData = story.map((element) => {
             element[1] = element[1].replace("kg ", "");
             let templateType = element[1].split(/ |_/)[0];
-            let templatePath = "";
 
             console.log("Type: ", templateType, " Orig text : ", element[1]);
 
-            templatePath = DEFAULTS.OVERLAY_TEMPLATES[templateType];
-            if (templatePath === undefined) {
-                templateType = "";
+            let templateDef = DEFAULTS.OVERLAY_TEMPLATES[templateType];
+            if (templateDef === undefined) {
+                return "";
             }
+            let templatePath = templateDef.template;
 
             return { 
-                "startTime": element[3].substring(1),
+                "startTime": parseFloat(element[3].substring(1)),
                 "duration": 5,
                 "templatePath": templatePath,
+                "layer": templateDef.layer,
                 "templateData": [
                     {
                         "id": "f0",
