@@ -1,0 +1,431 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta words=2706 rate=165>
+<rgroup number=114></rgroup>
+<wgroup number=114></wgroup>
+<formname>INSTALLATION</formname>
+<storyid>1ef2a444:00705d8e:5ba0f61c</storyid>
+</head>
+<story>
+<fields>
+<f id=title>system.resource</f>
+<f id=extra></f>
+<f id=modify-by>anry</f>
+<f id=modify-date>1537275420</f>
+<f id=audio-time uec>1125</f>
+<f id=ready>KLAR</f>
+<f id=line-count>485</f>
+</fields>
+<body>
+<p><u>;03; Device Style      Side  Effect   felter   Kommentar - </u></p>
+<p><u>; Arkiv options</u> &lt;-&gt; (minus kommentar) or &lt;E&gt; (exclude linie).</p>
+<p>; HUSK at hvis samme Style findes for forskellige devices så <tab><tab></p>
+<p>; vil &lt;E&gt; kun virke når begge har &lt;E&gt; (den logiske funktion er OR ).</p>
+<p> ;</p>
+<p> still  digi      9000   -   4    ; tom   side        &lt;E&gt;</p>
+<p> still  NY        9000   -   2    ; tom   side        &lt;E&gt;</p>
+<p> ;trio  side      9000   -   2    ; tom   side        &lt;E&gt;</p>
+<p> ;trio  NY        9000   -   2    ; tom   side        &lt;E&gt;01<tab>NØD INTRO<tab><tab><tab><tab><tab></p>
+<p>;</p>
+<p> ;prod  slutord    9000   -   1    ; test              &lt;E&gt; </p>
+<p>;</p>
+<p>;<tab><tab><tab><tab><tab><tab><tab></p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>Viz'rt 2013</b></p>
+<p>;===========================================================================</p>
+<p>;</p>
+<p><b>;</b><tab><tab><b>Nyhederne:</b></p>
+<p>;===========================================================================</p>
+<p>kg         værter                           vaert      -   1      ; BREAKING NEWS 1 LINE,</p>
+<p>kg         vaerter                           vaert      -   1      ; BREAKING NEWS 1 LINE,</p>
+<p>kg<tab>BREAKING_1_LINE<tab>0001<tab>-   1<tab>; BREAKING NEWS 1 LINE, MAX 23 CHR.</p>
+<p>kg<tab>BREAKING_2_LINER<tab>0003<tab>-   2<tab>; BREAKING NEWS 2 LINER, MAX 36 CHR. PER LINE</p>
+<p>kg<tab>dblbundt <tab><tab>0099<tab>-   2<tab>; nyhderne og sport bundt med 2 navne </p>
+<p>kg<tab>topt<tab><tab><tab>topt<tab>-   2<tab>; topt</p>
+<p>kg<tab>ftopt<tab><tab><tab>topt<tab>-   2<tab>; finanstopt (ikke oprettet)</p>
+<p>;kg<tab>fbund<tab><tab><tab>bund<tab>-   2<tab>; finansbund (ikke oprettet)</p>
+<p>kg<tab>bund  <tab><tab><tab>bund<tab>-   2<tab>; bund</p>
+<p>kg<tab>ident_blank <tab><tab>ident<tab>-   2<tab>; Sted + tid</p>
+<p>kg<tab>ident<tab> <tab><tab>ident<tab>-   2<tab>; Sted + tid</p>
+<p>kg<tab>arkiv<tab><tab><tab>arkiv<tab>-   1<tab>; arkiv</p>
+<p>kg <tab>farkiv<tab><tab><tab>arkiv<tab>-   1<tab>; arkiv</p>
+<p>kg<tab>direkte<tab><tab><tab>direkte<tab>-   1<tab>; direkte + sted</p>
+<p>kg<tab>direkteg<tab><tab><tab>direkteg<tab>-   1<tab>; direkte + sted (direkte gensending)</p>
+<p>kg<tab>19nyhvo<tab>  <tab><tab>0139<tab>-   2<tab>; vo med trompet</p>
+<p>kg<tab>22nyhvo<tab>  <tab><tab>0140<tab>-   2<tab>; 22-vo med trompet</p>
+<p>kg<tab>jorden<tab><tab><tab>0114<tab>-   2<tab>; jorden rundt 17/18</p>
+<p>kg<tab>22come<tab><tab><tab>0113<tab>-   1<tab>; 22 coming up</p>
+<p>kg<tab>18trompet<tab><tab>18trompet - 2<tab>; 18trompet</p>
+<p>kg<tab>19kb<tab><tab><tab>0116<tab>-   3<tab>; Overskrift til 19 keybag</p>
+<p>kg<tab>19teas<tab><tab><tab>0117<tab>-   3<tab>; overskrift til teaser 19</p>
+<p>kg<tab>baggrund<tab><tab>0118<tab>-   1<tab>; baggrund til tlfnummer eller webadresse</p>
+<p>kg <tab>ident_NEWS<tab><tab>ident<tab>-   2<tab>; News + tekst</p>
+<p>kg <tab>news<tab><tab><tab>ident<tab>-   2<tab>; News + tekst</p>
+<p>kg <tab>ident_NYHEDERNE<tab>ident<tab>-   2<tab>; Nyhederne + tekst</p>
+<p>kg <tab>NYHEDERNE<tab><tab>ident<tab>-   2<tab>; Nyhederne + tekst</p>
+<p>kg <tab>ident_BILLEDER_FRA <tab>ident<tab>-   2<tab>; Billeder fra + tekst</p>
+<p>kg        ident_TV2SPORT<tab>tv2sport -   2<tab>; Sport + tekst</p>
+<p>kg        tv2sport<tab><tab><tab>tv2sport -   2<tab>; Sport + tekst</p>
+<p>kg<tab>billederFra_logo<tab><tab>billederFra_logo<tab><tab>-   1      ;<tab></p>
+<p>kg<tab>billederFra_txt<tab><tab>billederFra_txt<tab><tab>-   1      ;<tab></p>
+<p>kg<tab>nyhedernewall <tab><tab>0135 <tab>-   1<tab>; Nyhederne-baggrund til storskærme *<tab></p>
+<p>kg<tab>19digi<tab><tab><tab>0136<tab>-   2      ; Nyhderne 19 digi - 2 linier</p>
+<p>kg<tab>pilot<tab><tab><tab>pde<tab>-   3<tab>; pilot-elementer NEWS</p>
+<p>kg<tab>19tema  <tab><tab>19TEMA - 1<tab>; Tema digi pict</p>
+<p>kg           powerdk<tab><tab>PN_DK   - 2      ; power news  danmark</p>
+<p>kg           powerwo<tab><tab>PN_WORLD   - 2      ; power news  verden</p>
+<p>kg<tab>temaud<tab><tab><tab>xx<tab>  - 1<tab>; </p>
+<p>kg<tab>1234tema<tab><tab>xx<tab>-   1<tab>;</p>
+<p>kg<tab>overbliktema<tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>ovl-all-out<tab><tab>xx<tab>- 1<tab>:</p>
+<p>kg<tab>tema_video<tab><tab>xx<tab> - 1<tab>; Tema video </p>
+<p>kg<tab>tema_video_out<tab><tab>xx<tab>- 1<tab>; Tema video out</p>
+<p>kg<tab>TEMA_OVERBLIK<tab>xx<tab>-  1<tab>; Tema overblik (NN2015)</p>
+<p>kg<tab>altud<tab><tab><tab>xx<tab>-  1<tab>; alt overlay ud (NN2015)</p>
+<p>kg<tab>OUT_TEMA_H<tab><tab>xx<tab>-  1<tab>; tager TEma H af (NN2015)</p>
+<p>kg <tab>nyh_logo<tab><tab>xx<tab>-  1<tab>; nyheds logo (NN2015)</p>
+<p>kg<tab>sport_logo<tab><tab>xx<tab>-  1<tab>; Sports logo (NN2015)</p>
+<p>kg<tab>vejr_logo<tab><tab>xx<tab>-  1<tab>; Vejr logo (NN2015)</p>
+<p>kg<tab>teaser_omlidt<tab><tab>xx<tab>-  2<tab>; 19 teaser tekst(NN2015)</p>
+<p>kg<tab>keyback<tab><tab>xx<tab>-  1<tab>; keybacktekst(NN2015)</p>
+<p>kg<tab>TEMA_19INSPIRATION<tab>xx<tab>-  1<tab>;tema inspiration (NN2015)</p>
+<p>kg<tab>19ur<tab><tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>omlidttema<tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>logoud  <tab><tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg <tab>logonyh<tab><tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg <tab>logosport<tab><tab>xx<tab>-  1<tab>;</p>
+<p>;logo <tab>logonyh<tab><tab><tab>xx<tab>-  1<tab>;</p>
+<p>;logo <tab>logosport<tab><tab>xx<tab>-  1<tab>;</p>
+<p>;logo<tab>logoud  <tab><tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>tlftoptlive<tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>tlfdirekte<tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>tlftopt<tab><tab><tab>tlftop<tab>-  2<tab>;</p>
+<p>kg<tab>jordenrundt<tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg   <tab>22credit<tab><tab><tab>xx<tab>-  1<tab>;</p>
+<p>kg<tab>TEMA_Default<tab><tab>xx<tab>-  1<tab>;</p>
+<p>;kg        billederfra_txt               xx        -   1      ;  (NN2015)</p>
+<p>;kg        billederfra_logo               xx        -   1      ; (NN2015)</p>
+<p>kg<tab>disclaimer<tab><tab>xx<tab>-   1<tab>; business</p>
+<p>kg<tab>TEMA_DANSKE_STEMMER<tab>xx<tab>-<tab>1<tab>; afstemning</p>
+<p></p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p><b>;</b><tab><tab><b>VALG Templates:</b></p>
+<p>;===========================================================================</p>
+<p>;==========================================================================</p>
+<p><b>;</b><tab><tab><b>2012 USAVALG  Templates:</b></p>
+<p>;===========================================================================</p>
+<p>;</p>
+<p>kg<tab>usbund  <tab><tab>US12BUNDT<tab>-   2<tab>; bund</p>
+<p>kg         usident<tab><tab><tab>US12IDENT<tab>-   2      ; nob  </p>
+<p>kg<tab>ustopt<tab><tab><tab>US12TOPT<tab>-   2<tab>; Topt </p>
+<p>;==========================================================================</p>
+<p><b>;</b><tab><tab><b>Royal Templates:</b></p>
+<p>;===========================================================================</p>
+<p>;</p>
+<p>kg<tab>rbund  <tab><tab><tab>RBUNDT<tab>-   2<tab>; Royal event bund</p>
+<p>kg           rnob<tab><tab><tab>RNOB<tab><tab>-   1         ; Royal nob</p>
+<p>kg<tab>rinfo  <tab><tab><tab>RINFOBOKS<tab>-   2<tab>; Royal event bund</p>
+<p>kg<tab>rtopt<tab><tab><tab>RTOP<tab>-   2<tab>; Royal event Topt </p>
+<p>kg<tab>rhenv<tab><tab><tab>RHENV<tab>-   1<tab>; Royal event 1 line Bundt (for www etc')</p>
+<p>kg<tab>rident<tab><tab><tab>RIDENT<tab>-   2<tab>; Royal event Ident</p>
+<p>kg<tab>Royal13<tab><tab><tab>0656<tab>-   2<tab>; tip en 13er</p>
+<p>;===========================================================================</p>
+<p><b>;</b><tab><tab><b>Sporten:</b></p>
+<p>;===========================================================================</p>
+<p>kg<tab>bundright<tab><tab>bundright<tab><tab>-   1<tab>;</p>
+<p>kg <tab>leth_txt<tab><tab><tab>leth_txt<tab><tab><tab>-   1<tab>;</p>
+<p>kg<tab>billederFra_logo<tab><tab>billederFra_logo<tab><tab>-   1      ;<tab></p>
+<p>kg<tab>billederFra_txt<tab><tab>billederFra_txt<tab><tab>-   1      ;<tab></p>
+<p>kg<tab>sbund <tab><tab><tab>0200<tab>-   2<tab>; sportsbund<tab></p>
+<p>kg<tab>stopt<tab><tab><tab>0201<tab>-   2<tab>; sportstopt</p>
+<p>kg<tab>sident<tab><tab><tab>0202<tab>-   1<tab>; sportsident</p>
+<p>kg<tab>sarkiv<tab><tab><tab>0204<tab>-   1<tab>; sportsarkiv</p>
+<p>kg<tab>18strompet<tab><tab>18strompet - 2   ; 18strompet</p>
+<p>kg<tab>sdir<tab><tab><tab>0207<tab>-   1<tab>; sportdirekte + sted</p>
+<p>kg<tab>canalplus<tab><tab>0208<tab>-   1<tab>; billede fra canal plus</p>
+<p>kg<tab>sbaggrund<tab><tab>0213<tab>-   1<tab>; txtdigi</p>
+<p>kg <tab>eurosport <tab><tab>0228<tab>-   1<tab>; Billeder fra EUROSPORT</p>
+<p>kg <tab>dk4<tab> <tab><tab>0229<tab>-   1<tab>; Billeder fra DK4</p>
+<p>kg <tab>tv3sport <tab><tab>0230<tab>-   1<tab>; Billeder fra TV 3 Sport</p>
+<p>kg <tab>tv3sport1 <tab><tab>tv3sport1<tab>-   1<tab>; Billeder fra TV 3 Sport1</p>
+<p>kg <tab>tv3sport2 <tab><tab>tv3sport2<tab>-   1<tab>; Billeder fra TV 3 Sport2</p>
+<p>kg <tab>tv3plus<tab> <tab><tab>tv3plus<tab>-   1<tab>; Billeder fra TV 3 Plus</p>
+<p>kg <tab>viasatgolf <tab><tab>viasatgolf<tab>-   1<tab>; Billeder fra Viasatgolf</p>
+<p>kg <tab>viaplay<tab> <tab><tab>viaplay<tab>-   1<tab>; Billeder fra Viaplay</p>
+<p>kg      <tab>clearallsport<tab><tab>0232 <tab>-   1      ; Al sportsgrafik væk</p>
+<p>kg<tab>nedtælling<tab><tab>0234     -   1      ; nedtelling til event</p>
+<p>kg<tab>sbund+<tab><tab><tab>0236<tab>-   3<tab>; repbundt+ foto/redigering</p>
+<p>kg<tab>canal9<tab><tab><tab>0238<tab>-   1<tab>; Chanel 9 Credit</p>
+<p>kg<tab>canal8<tab><tab><tab>CAN8<tab>-   1<tab>; Chanel 8</p>
+<p>kg<tab>kanal5<tab><tab><tab>Canal_5<tab>-   1<tab>; Kanel 5</p>
+<p>kg<tab>6eren<tab><tab><tab>Canal_6<tab>-   1<tab>; 6eren</p>
+<p>kg      <tab>vtv2sport<tab><tab>3230<tab>-   1<tab>; Billeder fra TV 2 SPORT (venstre)</p>
+<p>kg      <tab>htv2sport<tab><tab>3231<tab>-   1<tab>; Billeder fra TV 2 SPORT (højre)</p>
+<p>kg<tab>sevbund<tab><tab><tab>0901<tab>-   3<tab>; Event bundt</p>
+<p>kg<tab>sevtopt<tab><tab><tab>0902<tab>-   3<tab>; Event-topt</p>
+<p>kg<tab>sevtlfbundt<tab><tab>0903<tab>-   3<tab>; Event-telefonbund</p>
+<p>kg<tab>sevtlftopt<tab><tab>0904<tab>-   2<tab>; Event-telefontopt</p>
+<p>kg<tab>sevident<tab><tab><tab>0905<tab>-   2<tab>; Event-ident</p>
+<p>kg<tab>lkbundt<tab><tab><tab>lkBundt<tab>-   2<tab>; Event-topt</p>
+<p>kg<tab>lktopt<tab><tab><tab>lkTop<tab>-   2<tab>; Event-topt</p>
+<p>kg<tab>lkident<tab><tab><tab>lkIdent<tab>-   2<tab>; Event-ident</p>
+<p>kg<tab>sevkomm<tab><tab>0906<tab>-   2<tab>; Event-kommentatorbundt</p>
+<p>kg<tab>sevnob<tab><tab><tab>0907<tab>-   1<tab>; Fritekst</p>
+<p>kg<tab>komm<tab><tab><tab>0906<tab>-   2<tab>; Kommentatorbundt</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>NBA</b></p>
+<p>;===========================================================================</p>
+<p>kg<tab>nbabund<tab><tab>nbabund<tab>-  2<tab>;NBA-bundt<tab><tab></p>
+<p>kg<tab>nbatopt<tab><tab><tab>nbatopt<tab><tab>-  2<tab>;NBA-topt</p>
+<p>kg<tab>nbatlfbund<tab><tab>nbatlfbund<tab>-  2<tab>;NBA-tlfbundt</p>
+<p>kg<tab>nbatlftopt<tab><tab>nbatlftopt<tab>-  2<tab>;NBA-tlftopt</p>
+<p>kg<tab>nbakomm<tab><tab>nbakomm<tab>-  2<tab>;NBA-kommentatorbundt</p>
+<p>kg<tab>nbaident<tab><tab>nbaident<tab>-  2<tab>;NBA-ident</p>
+<p>kg<tab>nbadirekte<tab><tab>nbadirekte<tab>-  1<tab>;NBA-direkte</p>
+<p>kg<tab>nbafakta<tab><tab>nbafakta<tab>-  1<tab>;NBA-fakta</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>FIFA EM/VM </b></p>
+<p>;===========================================================================</p>
+<p>kg        fifbund<tab><tab>2240<tab>-   2<tab>; 201x FIFA bundt</p>
+<p>kg        fiftopt<tab><tab>2243<tab>-   2<tab>; 201x FIFA TOPT</p>
+<p>kg        fifident<tab><tab>2246<tab>-   1<tab>; 201x FIFAIDENT</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab>XXXXX<b>  (ev1) </b></p>
+<p>;===========================================================================</p>
+<p>kg<tab>ev1bund<tab><tab><tab>ev1bund<tab>- 2<tab>;</p>
+<p>kg<tab>ev1bundright<tab><tab>ev1bundright<tab>- 2<tab>;</p>
+<p>kg<tab>ev1topt<tab><tab><tab>ev1topt<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev1direkte<tab><tab>ev1direkte<tab>- 1<tab>; </p>
+<p>kg<tab>ev1tlfbund<tab><tab>ev1tlfbund<tab>- 2<tab>;</p>
+<p>kg<tab>ev1tlftopt<tab><tab>ev1tlftopt<tab>- 2<tab>;</p>
+<p>kg<tab>ev1ident<tab><tab><tab>ev1ident<tab>- 2<tab>;</p>
+<p>kg<tab>ev1head<tab><tab><tab>ev1head<tab>- 1<tab>;</p>
+<p>kg<tab>ev1break<tab><tab>ev1break<tab>- 1<tab>;</p>
+<p>kg<tab>ev1breaklong<tab><tab>ev1break2line<tab>- 1<tab>; smaller text, can hold 2 lines, self breaking lines (1 text input)</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>EVENT 1</b></p>
+<p>;===========================================================================:</p>
+<p>;kg<tab>ev1bund<tab><tab><tab>ev1bund<tab><tab>- 2<tab>; ev1bund</p>
+<p>;kg<tab>ev1topt<tab><tab><tab>ev1topt<tab><tab>- 2<tab>; ev1topt</p>
+<p>;kg<tab>ev1direkte<tab><tab>ev1direkte<tab>- 1<tab>; ev1direkte</p>
+<p>;kg<tab>ev1komm<tab><tab>ev1komm<tab>- 2<tab>; ev1komm;</p>
+<p>;kg<tab>ev1tlfbund<tab><tab>ev1tlfbund<tab>- 2<tab>; ev1tlfbund</p>
+<p>;kg<tab>ev1tlftopt<tab><tab>ev1tlftopt<tab>- 2<tab>; ev1tlftopt</p>
+<p>;kg<tab>ev1ident<tab><tab><tab>ev1ident<tab><tab>- 2<tab>; ev1ident</p>
+<p>;kg<tab>ev1frbund<tab><tab>ev1frbund<tab>- 1<tab>; ev1frbund</p>
+<p>;kg<tab>ev1tema<tab><tab>ev1tema<tab>- 1<tab>; ev1tema</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>EVENT 2</b></p>
+<p>;===========================================================================</p>
+<p>kg<tab>ev2bund<tab><tab><tab>ev2bund<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev2bundright<tab><tab>ev2bund<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev2topt<tab><tab><tab>ev2topt<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev2direkte<tab><tab>ev2direkte<tab>- 1<tab>;</p>
+<p>kg<tab>ev2komm<tab><tab>ev2komm<tab>- 2<tab>;</p>
+<p>kg<tab>ev2tlfbund<tab><tab>ev2tlfbund<tab>- 2<tab>;</p>
+<p>kg<tab>ev2tlftopt<tab><tab>ev2tlftopt<tab>- 2<tab>;</p>
+<p>kg<tab>ev2ident<tab><tab><tab>ev2ident<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev2frbund<tab><tab>ev2frbund<tab>- 1<tab>;</p>
+<p>kg<tab>ev2tema<tab><tab>ev2tema<tab>- 1<tab>;</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>EVENT 3 </b><pi><b>GIRO og Touren og Vueltaen</b></pi></p>
+<p>;===========================================================================</p>
+<p>kg<tab>ev3bundright<tab><tab>ev3bundright<tab>- 2<tab>;</p>
+<p>kg<tab>ev3bund<tab><tab><tab>ev3bund<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev3topt<tab><tab><tab>ev3topt<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev3direkte<tab><tab>ev3direkte<tab>- 1<tab>;</p>
+<p>kg<tab>ev3komm<tab><tab>ev3komm<tab>- 2<tab>;</p>
+<p>kg<tab>ev3tlfbund<tab><tab>ev3tlfbund<tab>- 2<tab>;</p>
+<p>kg<tab>ev3tlftopt<tab><tab>ev3tlftopt<tab>- 2<tab>;</p>
+<p>kg<tab>ev3ident<tab><tab><tab>ev3ident<tab><tab>- 2<tab>;</p>
+<p>kg<tab>ev3frbund<tab><tab>ev3frbund<tab>- 1<tab>;</p>
+<p>kg<tab>ev3tema<tab><tab>ev3tema<tab>- 1<tab>;</p>
+<p>kg<tab>ev3fakta<tab><tab><tab>ev3fakta<tab><tab>- 2<tab>;</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>HÅNDBOLD EM/VM 2011</b></p>
+<p>;===========================================================================</p>
+<p>kg        handbund<tab><tab>2240<tab>-   2<tab>; 2011 Håndbold bundt</p>
+<p>kg        handtlfbund<tab><tab>2241<tab>-   2<tab>; 2011 Håndbold bundt Telefon</p>
+<p>kg        handtopt<tab><tab>2243<tab>-   2<tab>; 2011 Håndbold  -topt</p>
+<p>kg        handtv2sport                  2230     -   1      ; 2011 HåndboldidentTV2Sport</p>
+<p>kg        handcan8                      2232     -   1      ; 2011 HåndboldidentTV2Sport</p>
+<p>kg        handcan9                      2231     -   1      ; 2011 HåndboldidentTV2Sport</p>
+<p>kg        handeuro                       2233     -   1      ; 2011 HåndboldidentTV2Sport</p>
+<p>kg      <tab>handtlftopt<tab><tab>2244<tab>-   2<tab>; 2011 Håndbold -topt Telefon</p>
+<p>kg      <tab>handident<tab><tab>2246<tab>-   2<tab>; 2011 Håndbold -ident</p>
+<p>kg      <tab>friident<tab><tab><tab>2242<tab>-   1 <tab>; 2011 Håndbold FRI BUNDT (web?)</p>
+<p>kg      <tab>handkom<tab><tab>2248<tab>-   2 <tab>; 2011 Håndbold kommentator</p>
+<p>;</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p><b>;</b><tab><tab><b>Regioner:</b></p>
+<p>;===========================================================================</p>
+<p>kg<tab>idsyd<tab><tab><tab>0300<tab>-   1<tab>; regionsident syd</p>
+<p>kg<tab>idmv<tab><tab><tab>0301<tab>-   1<tab>; regionsident mv</p>
+<p>kg<tab>idøstjyl<tab><tab><tab>0302<tab>-   1<tab>; regionsident østjyl</p>
+<p>kg<tab>idnord<tab><tab><tab>0303<tab>-   1<tab>; regionsident nord</p>
+<p>kg<tab>idfyn<tab><tab><tab>0304<tab>-   1<tab>; regionsident fyn</p>
+<p>kg<tab>idøst<tab><tab><tab>0305<tab>-   1<tab>; regionsident øst</p>
+<p>kg<tab>idlorry<tab><tab><tab>0306<tab>-   1<tab>; regionsident lorry</p>
+<p>kg<tab>idbornholm<tab><tab>0307<tab>-   1<tab>; regionsident bornholm</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p><b>;</b><tab><tab><b>TV2 SPORT: (0500-0599)</b></p>
+<p>;===========================================================================</p>
+<p>kg tv2sbund <tab><tab><tab><tab><tab>0500<tab>-  2<tab>;ALM bundt - TV 2 SPORT KANAL</p>
+<p>kg tv2sbund1<tab><tab><tab>0501<tab>-  1<tab>;1 linie bundt - TV 2 SPORT KANAL</p>
+<p>kg tv2stopt<tab><tab><tab>0502<tab>-  2<tab>;ALM TOP - TV 2 SPORT KANAL</p>
+<p>kg tv2stopt1<tab><tab><tab>0503<tab>-  1<tab>;1 linie TOP - TV 2 SPORT KANAL</p>
+<p>kg tv2skom<tab><tab><tab>0510<tab>-  3<tab>;ALM Komentattor (2) - TV 2 SPORT KANAL</p>
+<p>kg tema_out<tab><tab><tab>xx<tab>- 1<tab> ;tager tema ud</p>
+<p>kg tema_update<tab><tab><tab>xx<tab>- 1<tab> ; tema update på</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>Station2 2013</b></p>
+<p>;=========================================================================== </p>
+<p>kg   st2bund<tab><tab><tab>st2bund <tab>-   2<tab>; Station 2  bundt</p>
+<p>kg   st2topt<tab><tab><tab>st2topt   <tab>-   2<tab>; Station 2  topt</p>
+<p>kg   st2ident<tab><tab><tab>st2ident <tab>-   1<tab>; Station 2  ident</p>
+<p>kg   st2arkiv<tab><tab><tab>st2arkiv <tab>-   1<tab>; Station 2  arkiv</p>
+<p>kg   st2tlf<tab><tab><tab>st2tlf<tab>            -   2<tab>; Station 2  tlfnr. + politistation</p>
+<p>kg   st2www<tab><tab><tab>st2www             -   1<tab>; Station 2  www.krimi.tv2.dk</p>
+<p>kg   st2Patrol<tab><tab><tab>st2Patrol <tab>-   1<tab>; Omlidt Patrulje</p>
+<p>;kg   st2kontakt<tab><tab><tab>st2kontakt<tab>-   2<tab>; Stort tlf. nummer</p>
+<p>kg   st2kontakt114<tab><tab>st2kontakt114<tab>-   1<tab>; Henvisning til politistation</p>
+<p></p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p>;</p>
+<p>;</p>
+<p>;===========================================================================</p>
+<p>;<tab><tab><b>DagsDato 2008</b></p>
+<p>;=========================================================================== </p>
+<p>kg  ddbund<tab>  <tab><tab>0701<tab>-  2<tab>;  DagsDato Bundt</p>
+<p>kg  ddtop  <tab><tab><tab>0702<tab>-  2<tab>;  DagsDato Topt</p>
+<p>kg  ddident  <tab><tab><tab>0703<tab>-  2<tab>;  ARKIV/IDENT/DIREKT</p>
+<p>kg  ddteaser  <tab><tab><tab>0704<tab>-  1<tab>;  DagsDato Teaser</p>
+<p>kg  ddlogo  <tab><tab><tab>0700<tab>-  1<tab>;  START LOGO</p>
+<p>kg  ddibundt <tab><tab><tab>0711<tab>-  4<tab>;  Note, Ident first!</p>
+<p>kg  ddidtopt  <tab><tab><tab>0712<tab>-  4<tab>;  Note, Ident first!</p>
+<p><pi>;=========================================================================== </pi></p>
+<p><pi>;</pi><tab><tab><pi><b>NEWS/NYH MOSART</b></pi></p>
+<p><pi>;===========================================================================</pi></p>
+<p>;</p>
+<p><b>;;;;;;</b><pi><b>Nyhederne 2.3.2013:</b></pi></p>
+<p>;<tab></p>
+<p>dummy    disclaimer<tab><tab>xx<tab>-   1<tab>; business</p>
+<p>dummy    BusinessWEB<tab></p>
+<p>dummy    jukeboks<tab><tab><tab><tab><tab><tab>; Business</p>
+<p>dummy    TEMA_magasiner<tab>tema_magasiner<tab>-   1</p>
+<p>dummy    TEMA_kulturen<tab>tema_kulturen<tab><tab>-   1</p>
+<p>dummy    billederFra_logo<tab>billederFra_logo<tab><tab>-   1      ;<tab></p>
+<p>dummy    billederFra_txt<tab><tab>billederFra_txt<tab><tab>-   1      ;<tab></p>
+<p>dummy    bund<tab><tab><tab>Bund<tab><tab>-   2      ; TV2 News - Bundt </p>
+<p>dummy    topt <tab><tab><tab>Topt<tab><tab>-   2      ; TV2 News - Topt</p>
+<p>dummy    arkiv<tab><tab><tab>Arkiv<tab><tab>-   1      ; TV2 News - Arkiv &lt;E&gt;</p>
+<p>dummy    direkte<tab><tab>Direkte<tab><tab>-   1      ; TV2 News - Direkte &lt;E&gt;</p>
+<p>dummy    direkteg<tab><tab>Direktegensending<tab><tab>-   1      ; TV2 News - Direktegensending &lt;E&gt;<tab><tab></p>
+<p>dummy    trompet <tab><tab>Trompet<tab><tab>-   2      ; TV2 News - Digi Trompet</p>
+<p>dummy    vo <tab><tab><tab>VO<tab><tab>-   2      ; TV2 News - Digi VO</p>
+<p>dummy    tlftopt<tab><tab><tab>Bund<tab><tab>-   2      ; TV2 News - Telefontopt</p>
+<p>dummy    tlftoptlive<tab><tab>tlftoptlive<tab>-   2      ; TV2 News - Telefontoptlive</p>
+<p>dummy    tlfdirekte<tab><tab>tlfdirekte<tab>-   2      ; TV2 News - Telefondirekte</p>
+<p>dummy    værter            <tab><tab>vaerter<tab><tab>-   1      ; TV2 News-bundtværter</p>
+<p>dummy    vaerter            <tab>vaerter<tab><tab>-   1      ; TV2 News-bundtværter</p>
+<p>dummy    ident_blank<tab><tab>Ident<tab><tab>-   1      ; TV2 News - ident &lt;E&gt;</p>
+<p>dummy    ident<tab><tab><tab>Ident<tab><tab>-   1      ; TV2 News - ident &lt;E&gt;</p>
+<p>dummy    ident_news<tab><tab>NEWS<tab><tab>-   2<tab>; News + tekst</p>
+<p>dummy    news<tab><tab><tab>NEWS<tab><tab>-   2<tab>; News + tekst</p>
+<p>dummy    ident_nyhederne<tab>Nyhederne<tab>-   2<tab>; Nyhederne + tekst</p>
+<p>dummy    nyhederne<tab><tab>Nyhederne<tab>-   2<tab>; Nyhederne + tekst</p>
+<p>dummy    ident_billeder_fra<tab>Billeder_fra<tab>-   2<tab>; Billeder fra + tekst</p>
+<p>dummy<tab>   ident_tv2sport<tab><tab>tv2sport <tab>-   2<tab>; Sport + tekst</p>
+<p>dummy<tab>   tv2sport<tab><tab>tv2sport <tab>-   2<tab>; Sport + tekst</p>
+<p>dummy    infoboks<tab><tab>Infoboks<tab>-   2    <tab>; Infoboks &lt;E&gt;</p>
+<p>dummy    9finans<tab><tab>9finans<tab><tab>-   1    <tab>; Programlogo 9 Finans &lt;E&gt;</p>
+<p>dummy    12finans<tab><tab>12finans<tab>-   1    <tab>; Programlogo 12 Finans &lt;E&gt;</p>
+<p>dummy    17finans<tab><tab>17finans<tab>-   1    <tab>; Programlogo 17 Finans &lt;E&gt;</p>
+<p>dummy    22finans<tab><tab>22finans<tab>-   1    <tab>; Programlogo 22 Finans &lt;E&gt;</p>
+<p>dummy    logoud<tab><tab>OUT_TEMA<tab>-   1    <tab>; Programlogo ud &lt;E&gt;</p>
+<p>dummy    logonyh<tab><tab><tab><tab>-   1    <tab>; Programlogo ud &lt;E&gt;</p>
+<p>dummy    logoudsport<tab><tab><tab><tab>-   1    <tab>; Programlogo ud &lt;E&gt;</p>
+<p>dummy    presselogen<tab><tab>Presselogen<tab>-   1    <tab>; Programlogo Presselogen &lt;E&gt;</p>
+<p>dummy    tirsdagsanalysen<tab>Tirsanalyse<tab>-   1    <tab>; Programlogo Tirsdagsanalysen &lt;E&gt;</p>
+<p>dummy    pilot<tab><tab><tab>pilot<tab><tab>-   1    <tab>; Pilotelement fra Viz &lt;E&gt;;;</p>
+<p>dummy    kulturen<tab><tab>Kulturen<tab>-   1<tab>; Programlogo Kulturen på NEWS</p>
+<p>dummy    el<tab><tab><tab>EL_IDENT<tab>-   1<tab>; Programlogo Ellemann|Lykketoft</p>
+<p>dummy    sport<tab><tab><tab>EL_IDENT<tab>-   1<tab>; Programlogo Sporten</p>
+<p>dummy    tdf<tab><tab><tab>EL_IDENT<tab>-   1<tab>; Programlogo Tour de France</p>
+<p>dummy    klode<tab><tab><tab>TEMA_Default<tab>-   1<tab>; Default temaboks</p>
+<p>dummy    baseud<tab><tab>OUT_TEMA_ONLY<tab>-   1<tab>; Ryd default temaboks</p>
+<p>dummy    altud<tab><tab><tab>ALL_OUT<tab>-   1<tab>; Rydder skærm for overlay</p>
+<p>dummy    temaud<tab><tab>OUT_TEMA<tab>-   1<tab>; Ryd default temaboks</p>
+<p>dummy    TEMA_19_22_TXT<tab>TEMA_19_22_TXT<tab>-   2<tab>; Ryd default 19 eller 22 i dag</p>
+<p>dummy    TEMA_IMAGE_19<tab>TEMA_IMAGE_19<tab>-   1<tab>; 19 I DAG TEMA </p>
+<p>dummy    TEMA_IMAGE_22<tab>TEMA_IMAGE_22<tab>-   1<tab>; 19 I DAG TEMA </p>
+<p>dummy    TEMA_om_lidt_19<tab>TEMA_om_lidt_19<tab>-   1<tab>; 19 TEMA_om_lidt_190</p>
+<p>dummy    breakingud<tab><tab>OUT_TEMA_BREAKING<tab>-   1<tab>; Ryd breaking</p>
+<p>dummy<tab>   www<tab><tab><tab>WWW<tab><tab>-   1<tab>; www.facebook.com/ankerdal.news</p>
+<p>dummy<tab>   ankerdal<tab><tab>Ankerdal<tab>-   1<tab>; temabillede til Ankerdal</p>
+<p>;dummy    pilotdata<tab><tab>pilotdata<tab><tab>-   1<tab>; Mosart Pilot-element</p>
+<p>dummy    ol<tab><tab><tab>TEMA_OL<tab><tab>-   1<tab>; Mosart Pilot-element</p>
+<p>dummy    temavideoud<tab><tab>OUT_TEMA_PAGE<tab>-   1<tab>; tema video ud</p>
+<p>dummy    spørgetime<tab><tab>Spoergetime<tab>-   1<tab>; Tema Spørgetime</p>
+<p>dummy    nid<tab><tab><tab>TEMA_NEWS_IDAG<tab>-   1<tab>; tema News i dag</p>
+<p>dummy    hype<tab><tab><tab>TEMA_HYPE<tab>-   1<tab>; tema Hype</p>
+<p>dummy    vejr<tab><tab><tab>Vejret<tab><tab>-   1<tab>; </p>
+<p>dummy<tab>ovl-all-out<tab><tab>all out<tab><tab>-<tab>1;</p>
+<p>dummy    digiud <tab><tab>digiud<tab><tab>-   2      ; </p>
+<p>;</p>
+<p>;</p>
+<p>;</p>
+<p><b>;;;;;;</b><pi><b>Sporten 2.3.2013:</b></pi></p>
+<p>;</p>
+<p>dummy    billederFra_logo<tab>billederFra_logo<tab><tab>-   1      ;<tab></p>
+<p>dummy    billederFra_txt<tab><tab>billederFra_txt<tab><tab>-   1      ;<tab></p>
+<p>dummy<tab>   strompet<tab><tab>Strompet<tab>-   2    <tab>; TV2 News SPORT trompet</p>
+<p>dummy<tab>   svo<tab><tab><tab>SVO<tab><tab>-   2    <tab>; TV2 News SPORT vo</p>
+<p>dummy    tv3sport<tab><tab>TV_3_SPORT<tab>-   1    <tab>;  Billeder fra TV3 Sport</p>
+<p>dummy <tab>   tv3sport1 <tab><tab>tv3sport1<tab>-   1<tab>; Billeder fra TV 3 Sport1</p>
+<p>dummy<tab>   tv3sport2 <tab><tab>tv3sport2<tab>-   1<tab>; Billeder fra TV 3 Sport2</p>
+<p>dummy<tab>   tv3plus<tab> <tab>tv3plus<tab><tab>-   1<tab>; Billeder fra TV 3 Plus</p>
+<p>dummy    viasatgolf <tab><tab>viasatgolf<tab>-   1<tab>; Billeder fra Viasatgolf</p>
+<p>dummy<tab>   viaplay<tab> <tab>viaplay<tab><tab>-   1<tab>; Billeder fra Viaplay</p>
+<p>dummy<tab>   canalplus<tab><tab>Canal_plus<tab>-   1<tab>; Billeder fra Canal Plus</p>
+<p>dummy<tab>   dk4<tab><tab><tab>DK4<tab><tab>-   1<tab>; Billeder fra DK4</p>
+<p>dummy<tab>   canal9<tab><tab>Canal_9<tab><tab>-   1<tab>; Billeder fra Canal 9</p>
+<p>dummy    canal8<tab><tab>Canal_8<tab><tab>-   1<tab>; Billeder fra Canal 8</p>
+<p>dummy    6eren<tab><tab><tab>Canal_6<tab><tab>-   1<tab>; Billeder fra Canal 6</p>
+<p>dummy<tab>   kanal_5<tab><tab>Canal_5<tab><tab>-   1<tab>; Billeder fra kanal 5</p>
+<p>;</p>
+<p>;</p>
+<p><b>;Regionerne:</b></p>
+<p>dummy<tab>   idsyd<tab><tab><tab>0300<tab>-   1 <tab>; ident TV SYD</p>
+<p>dummy<tab>   idmv<tab><tab><tab>0301<tab>-   1 <tab>; ident TV MIDT/VEST</p>
+<p>dummy<tab>   idøstjyl<tab><tab>0302<tab>-   1 <tab>; ident TV ØSTJYLLAND</p>
+<p>dummy<tab>   idnord<tab><tab><tab>0303<tab>-   1 <tab>; ident TV NORD</p>
+<p>dummy<tab>   idfyn<tab><tab><tab>0304<tab>-   1 <tab>; ident TV FYN</p>
+<p>dummy<tab>   idøst<tab><tab><tab>0305<tab>-   1 <tab>; ident TV ØST</p>
+<p>dummy<tab>   idlorry<tab><tab><tab>0306<tab>-   1 <tab>; ident TV LORRY</p>
+<p>dummy<tab>   idbornholm<tab><tab>0307<tab>-   1 <tab>; ident TV BORNHOLM</p>
+<p>;</p>
+<p>;</p>
+<p><b>;Sommerfugle:</b></p>
+<p>dummy    sommerfugl1   <tab>8001<tab>-   2   <tab>; TV2 News - sommerfugl</p>
+<p>dummy    sommerfugl2   <tab>8002<tab>-   2   <tab>; TV2 News - sommerfugl</p>
+<p>dummy    sommerfugl3   <tab>8003<tab>-   2   <tab>; TV2 News - sommerfugl</p>
+<p>;</p>
+<p>;</p>
+<p>dummy    breakingorange1  <tab>9001<tab>-   1   <tab>; TV2 News - sommerfugl</p>
+<p>dummy    breakingorange2  <tab>9002<tab>-   1   <tab>; TV2 News - sommerfugl</p>
+<p>dummy    breakingblå1   <tab>9011<tab>-   1   <tab>; TV2 News - sommerfugl</p>
+<p>dummy    breakingblå2   <tab>9012<tab>-   1   <tab>; TV2 News - sommerfugl</p>
+<p>;</p>
+<p>cg4<tab>pilotdata<tab><tab>6000<tab>-   4<tab>;</p>
+<p></p>
+</body>
+</story>

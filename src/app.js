@@ -5,7 +5,6 @@ import * as DEFAULTS from '../DEFAULTS';
 
 export class App {
     constructor() {
-        console.log("RUNNING");
         this.getInewsData = this.getInewsData.bind(this);
 
         this.inewsConnection = inews({
@@ -23,7 +22,6 @@ export class App {
                 return this.convertInewsMetaToObject(storyName, story);
             });
         });
-        console.log("Didn't crash");
     }
 
     getInewsData() {
@@ -89,6 +87,7 @@ export class App {
             let templateType = element[1].split(/ |_/)[0];
 
             console.log("Type: ", templateType, " Orig text : ", element[1]);
+            console.log("Hele Element: ", element);
 
             let templateDef = DEFAULTS.OVERLAY_TEMPLATES[templateType];
             if (templateDef === undefined) {
@@ -115,7 +114,6 @@ export class App {
                 ]
             };
         });
-        console.log(fileData);
         if (fileData.length != 0) {
             let formattedData = {
                 "channel": [{
