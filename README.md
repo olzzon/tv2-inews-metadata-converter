@@ -4,7 +4,13 @@ A converter reading stories from iNews FTP server and convert the #kg graphics o
 
 The example_DEFAULTS.js is the template for the DEFAULTS.js file.
 
-The OVERLAY_TEMPLATES structure is: 
+#### Inews connection:
+IP, USERNAME, PASSWD etc.
+
+#### File output:
+The output file is json formatted so FILE_EXTENSION con be remaned to .json for other usecases.
+
+### The OVERLAY_TEMPLATES structure is: 
 * name: #kg name from the iNews manus
 * template: reference to the html template
 * layer: so more than one element can be on screen at a time. (ClipTool is using 19 and 20)

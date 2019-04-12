@@ -3,6 +3,7 @@ export const USERNAME = "iNewsUserName";
 export const PASSWORD = "iNewsPassword";
 export const INEWS_QUEUE = "INEWS.QUEUE.ON-AIR";
 export const MEDIA_FOLDER = "media/";
+export const FILE_EXTENSION = ".meta.ftd"; //format is .JSON compatible
 
 export const OVERLAY_TEMPLATES = {
     "bund": {

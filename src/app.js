@@ -36,7 +36,7 @@ export class App {
                             stories.push({"storyName": storyFile.storyName, "story": storyNsml});
                             if (index === dirList.length - 1) {
                                 resolve(stories);
-                            }    
+                            }
                         });
                     });
                 } else {
@@ -95,7 +95,7 @@ export class App {
             }
             let templatePath = templateDef.template;
 
-            return { 
+            return {
                 "startTime": parseFloat(element[3].substring(1)),
                 "duration": 5,
                 "templatePath": templatePath,
@@ -120,7 +120,7 @@ export class App {
                     "metaList": fileData
                 }]
             };
-            fs.writeFile(DEFAULTS.MEDIA_FOLDER + storyName + ".meta.ftd", JSON.stringify(formattedData, null, 4), (err) => {
+            fs.writeFile(DEFAULTS.MEDIA_FOLDER + storyName + DEFAULTS.FILE_EXTENSION, JSON.stringify(formattedData, null, 4), (err) => {
                 if(err) {
                     return console.log(err);
                 }
@@ -128,4 +128,4 @@ export class App {
             });
         }
     }
-} 
+}
