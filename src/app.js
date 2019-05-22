@@ -95,28 +95,45 @@ export class App {
             }
             let templatePath = templateDef.template;
 
-            return {
-                "htmlCcgType": "XML", // "XML" or "INVOKE",
-                "templatePath": templatePath,
-                "startTime": parseFloat(element[3].substring(1)),
-                "duration": 5,
-                "layer": templateDef.layer,
-                "templateXmlData": [
-                    {
-                        "id": "f0",
-                        "type": "text",
-                        "data": element[1].substring(1 + templateType.length)
-                    },
-                    {
-                        "id": "f1",
-                        "type": "text",
-                        "data": element[2]
-                    }
-                ],
-                "invokeStart": "",
-                "invokeEnd": ""
-            };
+            if (templateDef.htmlCcgType === "XML") {
+                return {
+                    "htmlCcgType": "XML", // "XML" or "INVOKE",
+                    "templatePath": templatePath,
+                    "startTime": parseFloat(element[3].substring(1)),
+                    "duration": 5,
+                    "layer": templateDef.layer,
+                    "templateXmlData": [
+                        {
+                            "id": "f0",
+                            "type": "text",
+                            "data": element[1].substring(1 + templateType.length)
+                        },
+                        {
+                            "id": "f1",
+                            "type": "text",
+                            "data": element[2]
+                        }
+                    ],
+                    "invokeStart": "",
+                    "invokeEnd": ""
+                };
+            } else if (templateDef.htmlCcgType === "INVOKE") {
+                let invokeStart = templateDef.invokeStart.replace('{text1}', element[1].substring(1 + templateType.length));
+                invokeStart = invokeStart.replace('{text2}', element[2].substring(1 + templateType.length));
+                return {
+                    "htmlCcgType": "INVOKE", // "XML" or "INVOKE",
+                    "templatePath": templatePath,
+                    "startTime": parseFloat(element[3].substring(1)),
+                    "duration": 5,
+                    "layer": templateDef.layer,
+                    "templateXmlData": [],
+                    "invokeStart": templateDef.invokeStart,
+                    "invokeEnd": templateDef.invokeEnd
+                };
+            }
         });
+
+
         if (fileData.length != 0) {
             let formattedData = {
                 "channel": [{
