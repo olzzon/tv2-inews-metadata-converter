@@ -96,11 +96,12 @@ export class App {
             let templatePath = templateDef.template;
 
             return {
+                "htmlCcgType": "XML", // "XML" or "INVOKE",
+                "templatePath": templatePath,
                 "startTime": parseFloat(element[3].substring(1)),
                 "duration": 5,
-                "templatePath": templatePath,
                 "layer": templateDef.layer,
-                "templateData": [
+                "templateXmlData": [
                     {
                         "id": "f0",
                         "type": "text",
@@ -111,7 +112,9 @@ export class App {
                         "type": "text",
                         "data": element[2]
                     }
-                ]
+                ],
+                "invokeStart": "",
+                "invokeEnd": ""
             };
         });
         if (fileData.length != 0) {
