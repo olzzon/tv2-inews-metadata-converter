@@ -87,7 +87,7 @@ export class App {
             let templateType = element[1].split(/ |_/)[0];
 
             console.log("Type: ", templateType, " Orig text : ", element[1]);
-            console.log("Hele Element: ", element);
+            console.log("Whole Element: ", element);
 
             let templateDef = DEFAULTS.OVERLAY_TEMPLATES[templateType];
             if (templateDef === undefined) {
@@ -118,8 +118,11 @@ export class App {
                     "invokeEnd": ""
                 };
             } else if (templateDef.htmlCcgType === "INVOKE") {
-                let invokeStart = templateDef.invokeStart.replace('{text1}', element[1].substring(1 + templateType.length));
-                invokeStart = invokeStart.replace('{text2}', element[2].substring(1 + templateType.length));
+                let invokeSteps = templateDef.invokeSteps.map(step => {
+                    let replacedStep = step.replace('{element}', element[1].substring(1 + templateType.length));
+                    replacedStep = replacedStep.replace('{element}', element[2]);
+                    return replacedStep;
+                });
                 return {
                     "htmlCcgType": "INVOKE", // "XML" or "INVOKE",
                     "templatePath": templatePath,
@@ -127,8 +130,7 @@ export class App {
                     "duration": 5,
                     "layer": templateDef.layer,
                     "templateXmlData": [],
-                    "invokeStart": templateDef.invokeStart,
-                    "invokeEnd": templateDef.invokeEnd
+                    "invokeSteps": invokeSteps
                 };
             }
         });
