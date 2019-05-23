@@ -114,8 +114,7 @@ export class App {
                             "data": element[2]
                         }
                     ],
-                    "invokeStart": "",
-                    "invokeEnd": ""
+                    "invokeSteps": []
                 };
             } else if (templateDef.htmlCcgType === "INVOKE") {
                 let invokeSteps = templateDef.invokeSteps.map(step => {
