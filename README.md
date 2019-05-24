@@ -12,16 +12,30 @@ The output file is json formatted so FILE_EXTENSION con be remaned to .json for 
 
 ### The OVERLAY_TEMPLATES structure is: 
 * name: #kg name from the iNews manus
+* htmlCcgType can be:
+* * "XML" Add, Play, Stop based templates
+* * "INVOKE" uses Invoke to call javascript methods. Parameters are added with {element} tags
 * template: reference to the html template
 * layer: so more than one element can be on screen at a time. (ClipTool is using 19 and 20)
+* invokeSteps: Array with the steps for calling the javascript methods.
 
 example: 
 (from examle_DEFAULTS.js)
 ```
-"bund": {
-        "template": "/HTML-Bundt/BUNDT",
+"topt": {
+        "htmlCcgType": "XML",  //XML or INVOKE
+        "template": "/HTML-Topt/TOPT",
         "layer": 20,
-    },
+},
+"bund": {
+    "htmlCcgType": "INVOKE", //XML or INVOKE
+    "template": "/main/main",
+    "layer": 19,
+    "invokeSteps": [
+        "mainStrap(true, '{element}', '{element}')",
+        "mainStrap(false)"
+    ]
+}
 ```
 
 A list of all the TV2 #kg codes is in the "TV2_INEWS_KG_CODES.xml" file.
