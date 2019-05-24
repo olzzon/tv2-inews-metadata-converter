@@ -87,7 +87,7 @@ export class App {
             let templateType = element[1].split(/ |_/)[0];
 
             console.log("Type: ", templateType, " Orig text : ", element[1]);
-            console.log("Hele Element: ", element);
+            console.log("Whole Element: ", element);
 
             let templateDef = DEFAULTS.OVERLAY_TEMPLATES[templateType];
             if (templateDef === undefined) {
@@ -95,28 +95,46 @@ export class App {
             }
             let templatePath = templateDef.template;
 
-            return {
-                "htmlCcgType": "XML", // "XML" or "INVOKE",
-                "templatePath": templatePath,
-                "startTime": parseFloat(element[3].substring(1)),
-                "duration": 5,
-                "layer": templateDef.layer,
-                "templateXmlData": [
-                    {
-                        "id": "f0",
-                        "type": "text",
-                        "data": element[1].substring(1 + templateType.length)
-                    },
-                    {
-                        "id": "f1",
-                        "type": "text",
-                        "data": element[2]
-                    }
-                ],
-                "invokeStart": "",
-                "invokeEnd": ""
-            };
+            if (templateDef.htmlCcgType === "XML") {
+                return {
+                    "htmlCcgType": "XML", // "XML" or "INVOKE",
+                    "templatePath": templatePath,
+                    "startTime": parseFloat(element[3].substring(1)),
+                    "duration": 5,
+                    "layer": templateDef.layer,
+                    "templateXmlData": [
+                        {
+                            "id": "f0",
+                            "type": "text",
+                            "data": element[1].substring(1 + templateType.length)
+                        },
+                        {
+                            "id": "f1",
+                            "type": "text",
+                            "data": element[2]
+                        }
+                    ],
+                    "invokeSteps": []
+                };
+            } else if (templateDef.htmlCcgType === "INVOKE") {
+                let invokeSteps = templateDef.invokeSteps.map(step => {
+                    let replacedStep = step.replace('{element}', element[1].substring(1 + templateType.length));
+                    replacedStep = replacedStep.replace('{element}', element[2]);
+                    return replacedStep;
+                });
+                return {
+                    "htmlCcgType": "INVOKE", // "XML" or "INVOKE",
+                    "templatePath": templatePath,
+                    "startTime": parseFloat(element[3].substring(1)),
+                    "duration": 5,
+                    "layer": templateDef.layer,
+                    "templateXmlData": [],
+                    "invokeSteps": invokeSteps
+                };
+            }
         });
+
+
         if (fileData.length != 0) {
             let formattedData = {
                 "channel": [{
