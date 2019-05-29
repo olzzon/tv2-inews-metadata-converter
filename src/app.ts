@@ -1,9 +1,11 @@
 import fs from 'fs';
 import inews from '@johnsand/inews';
-import { on } from 'cluster';
-import * as DEFAULTS from '../DEFAULTS';
+import * as DEFAULTS from './DEFAULTS';
 
 export class App {
+    inewsConnection: any;
+    stories: Array<any> = [];
+
     constructor() {
         this.getInewsData = this.getInewsData.bind(this);
 
@@ -24,15 +26,15 @@ export class App {
         });
     }
 
-    getInewsData() {
+    getInewsData(): Promise<Array<any>> {
         return new Promise((resolve, reject) => {
             let inewsQueue = DEFAULTS.INEWS_QUEUE;
-            let stories = [];
-            this.inewsConnection.list(inewsQueue, (error, dirList) => {
+            let stories: Array<any> = [];
+            this.inewsConnection.list(inewsQueue, (error: any, dirList: any) => {
                 if(!error) {
                     console.log("File list readed");
-                    dirList.map((storyFile, index) => {
-                        this.inewsConnection.storyNsml(inewsQueue, storyFile.file, (error, storyNsml) => {
+                    dirList.map((storyFile: any, index: number) => {
+                        this.inewsConnection.storyNsml(inewsQueue, storyFile.file, (error: any, storyNsml: any) => {
                             stories.push({"storyName": storyFile.storyName, "story": storyNsml});
                             if (index === dirList.length - 1) {
                                 resolve(stories);
@@ -48,7 +50,7 @@ export class App {
         });
     }
 
-    extractInewsMetaData(storyName, story) {
+    extractInewsMetaData(storyName: string, story: any) {
         let fileName = story.split("<f id=video-id>")[1].split("</f>")[0];
         if (fileName === "") {
             fileName = storyName;
@@ -60,12 +62,12 @@ export class App {
 
         //Get sub <ap></ap> elements
         let convertedElements = elements
-            .map((string) => {
+            .map((string: string) => {
                 return string.match(/<\s*ap[^>]*>([\s\S]*?)<\s*\/\s*ap>/g);
             });
         //Clean Up and return without <ap></ap> tags in text:
-        convertedElements = convertedElements.map((element) => {
-            return element.map( (string) => {
+        convertedElements = convertedElements.map((element: any) => {
+            return element.map( (string: string) => {
                 return string
                 .replace(/<\s*ap[^>]*>/, "")
                 .replace(/<\s*\/\s*ap>/, "");
@@ -74,7 +76,7 @@ export class App {
         return { "storyName": fileName, "story": convertedElements };
     }
 
-    convertInewsMetaToObject(storyName, story) {
+    convertInewsMetaToObject(storyName: string, story: Array<any>) {
         //Filter out non kg elements:
         story = story.filter((element) => {
             if (element.length < 2) return false;
@@ -84,7 +86,7 @@ export class App {
 
         let fileData = story.map((element) => {
             element[1] = element[1].replace("kg ", "");
-            let templateType = element[1].split(/ |_/)[0];
+            let templateType: string = element[1].split(/ |_/)[0];
 
             console.log("Type: ", templateType, " Orig text : ", element[1]);
             console.log("Whole Element: ", element);
@@ -99,7 +101,7 @@ export class App {
                 return {
                     "htmlCcgType": "XML", // "XML" or "INVOKE",
                     "templatePath": templatePath,
-                    "startTime": parseFloat(element[3].substring(1)),
+                    "startTime": 60 * parseFloat(element[3].substring(1)) | 0,
                     "duration": 5,
                     "layer": templateDef.layer,
                     "templateXmlData": [
@@ -117,7 +119,7 @@ export class App {
                     "invokeSteps": []
                 };
             } else if (templateDef.htmlCcgType === "INVOKE") {
-                let invokeSteps = templateDef.invokeSteps.map(step => {
+                let invokeSteps = templateDef.invokeSteps.map((step: string) => {
                     let replacedStep = step.replace('{element}', element[1].substring(1 + templateType.length));
                     replacedStep = replacedStep.replace('{element}', element[2]);
                     return replacedStep;
@@ -125,7 +127,7 @@ export class App {
                 return {
                     "htmlCcgType": "INVOKE", // "XML" or "INVOKE",
                     "templatePath": templatePath,
-                    "startTime": parseFloat(element[3].substring(1)),
+                    "startTime": 60 * parseFloat(element[3].substring(1)) | 0,
                     "duration": 5,
                     "layer": templateDef.layer,
                     "templateXmlData": [],
@@ -141,7 +143,7 @@ export class App {
                     "metaList": fileData
                 }]
             };
-            fs.writeFile(DEFAULTS.MEDIA_FOLDER + storyName + DEFAULTS.FILE_EXTENSION, JSON.stringify(formattedData, null, 4), (err) => {
+            fs.writeFile(DEFAULTS.MEDIA_FOLDER + storyName + DEFAULTS.FILE_EXTENSION, JSON.stringify(formattedData, null, 4), (err: any) => {
                 if(err) {
                     return console.log(err);
                 }
