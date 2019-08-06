@@ -14,6 +14,7 @@ casparcg.config
 media/
 log/
 testlog
+yarn.lock
 
 # Folder config file #
 ######################
