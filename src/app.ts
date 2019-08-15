@@ -16,13 +16,18 @@ export class App {
         });
         this.getInewsData()
         .then((data) => {
+            if (!DEFAULTS.FULL_RUNDOWN) {
             this.stories = data.map(({ storyName, story}) => {
                 return this.extractInewsMetaData(storyName, story);
             });
-
-            this.stories = this.stories.map(({ storyName, story}) => {
-                return this.convertInewsMetaToObject(storyName, story);
-            });
+                this.stories = this.stories.map(({ storyName, story}) => {
+                    return this.convertInewsMetaToObject(storyName, story);
+                });
+            } else {
+                data.map(({ storyName, story}, index) => {
+                    this.writeFullStory(storyName, story, index)
+                })
+            }
         });
     }
 
@@ -151,4 +156,16 @@ export class App {
             });
         }
     }
+
+    writeFullStory(storyName: string, story: Array<any>, index: number) {
+//        story[0] = story[0].replace('nsml version="-//AVID//DTD NSML 1.0//EN"', '?xml version="1.0" encoding="UTF-8" standalone="no" ?')
+        console.log(("00"+String(index)).slice(-3)+" "+storyName, story);
+        fs.writeFile(DEFAULTS.MEDIA_FOLDER + ("00"+String(index)).slice(-3) + " " + storyName + DEFAULTS.FILE_EXTENSION, story, (err: any) => {
+            if(err) {
+                return console.log(err);
+            }
+            console.log("The file ", storyName, " was saved!");
+        });
+    }
 }
+
