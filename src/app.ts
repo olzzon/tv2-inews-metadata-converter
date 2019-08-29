@@ -180,7 +180,10 @@ export class App {
 			// Put end tag on <a> tags:
 			story = story.replace(/<a (.*?)>/g, '<a $1></a>')
 			// Remove double tab in some forms:
-			story = story.replace(/<tab>/g, '')
+            story = story.replace(/<tab>/g, '')
+			// Remove <mc> and </mc> tags:
+			story = story.replace(/<mc>/g, '')
+			story = story.replace(/<\/mc>/g, '')
 
 			return story
 		})
