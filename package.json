@@ -16,7 +16,8 @@
   "dependencies": {
     "@johnsand/inews": "^1.3.3",
     "nodemon": "^1.19.1",
-    "xml-js": "^1.6.11"
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.4.22"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",

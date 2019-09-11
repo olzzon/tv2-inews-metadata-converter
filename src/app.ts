@@ -39,7 +39,7 @@ export class App {
                 if(!error) {
                     console.log("File list readed");
                     dirList.map((storyFile: any, index: number) => {
-                        this.inewsConnection.storyNsml(inewsQueue, storyFile.file, (error: any, storyNsml: any) => {
+                        this.inewsConnection.story(inewsQueue, storyFile.file, (error: any, storyNsml: any) => {
                             stories.push({"storyName": storyFile.storyName, "story": storyNsml});
                             if (index === dirList.length - 1) {
                                 resolve(stories);
@@ -160,44 +160,8 @@ export class App {
     writeFullStory(storyName: string, story: string, index: number) {
         storyName = storyName.replace('/', '');
 
-		// Split tags into objects:
-		let storyArray = story.split('\n')
-
-		// Put end tag on <meta>
-		storyArray[2] = storyArray[2].replace(/<meta(.*?)>/g, '<meta$1\></meta>')
-
-		console.log('DUMMY LOG : ', storyArray)
-
-		storyArray = storyArray.map((story: string) => {
-			// Set quotes around arguments xx="yy" instead of xx=yy
-			// But not on <ap> tags:
-			if (story.slice(0, 3) !== '<ap') {
-				// and not when there´s allready qoute around argument:
-				if (!story.match(/="/)) {
-					story = story.replace(/(<.*?)=(.*?)>/g, '$1="$2">')
-				}
-			}
-			// Put end tag on <a> tags:
-			story = story.replace(/<a (.*?)>/g, '<a $1></a>')
-			// Remove double tab in some forms:
-            story = story.replace(/<tab>/g, '')
-			// Remove <mc> and </mc> tags:
-			story = story.replace(/<mc>/g, '')
-			story = story.replace(/<\/mc>/g, '')
-
-			return story
-		})
-		// Change header to XML:
-		storyArray[0] = '<?xml version="1.0" encoding="UTF-8" standalone="no" ?>'
-		// Put tag around the full form (head-body etc.):
-		storyArray.splice(1, 0, '<root>')
-		storyArray.push('</root>')
-
-		// Convert back to string:
-		story = storyArray.join('\n')
-
         console.log(("00"+String(index)).slice(-3)+" "+storyName, story);
-        fs.writeFile(DEFAULTS.MEDIA_FOLDER + ("00"+String(index)).slice(-3) + " " + storyName + DEFAULTS.FILE_EXTENSION, story, (err: any) => {
+        fs.writeFile(DEFAULTS.MEDIA_FOLDER + ("00"+String(index)).slice(-3) + " " + storyName + DEFAULTS.FILE_EXTENSION, JSON.stringify(story), (err: any) => {
             if(err) {
                 return console.log(err);
             }
